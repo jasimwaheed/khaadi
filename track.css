@@ -1,0 +1,149 @@
+/* Page Layout */
+body{
+    font-family: Arial, sans-serif;
+    background: #f0f0f5;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+.track-header{
+    width: 100%;
+    display: flex;
+    justify-content: center; /* center the home button */
+    padding: 20px 0;
+    background: #f1c40f;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.track-header .home-btn{
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+    background: #fff;
+    border: 2px solid #222;
+    padding: 12px 25px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.track-header .home-btn:hover{
+    color: #222;
+    border-color: #fff;
+    background: #f1c40f;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.track-header .home-btn::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background: rgb(255, 215, 15);
+    transition: all 0.4s ease;
+    z-index: 0;
+}
+
+.track-header .home-btn:hover::after{
+    height: 100%;
+}
+
+.track-header .home-btn span{
+    position: relative;
+    z-index: 1;
+}
+
+/* Track Container */
+.track-container{
+    background: #f1c40f;
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    margin-top: 60px; /* space from header */
+}
+
+/* Input and Button */
+input[type="text"]{
+    width: 65%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#track-order-btn{
+    padding: 12px 25px;
+    background: #f1c40f;
+    color: #222;
+    border: 2px solid #222;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+#track-order-btn:hover{
+    background: #222;
+    color: #fff;
+    border-color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Track Result */
+.track-result{
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Order Item */
+.order-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+}
+
+.order-item img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius:5px;
+}
+
+.order-item h4{
+    margin:0;
+    font-size:16px;
+}
+
+.order-item p{
+    margin:2px 0;
+}
+
+.status-pending{
+    color: orange;
+    font-weight: bold;
+}
+
+.status-received{
+    color: green;
+    font-weight: bold;
+}

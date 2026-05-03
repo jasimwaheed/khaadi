@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================== BACKGROUND SLIDER STYLE ================== */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(-45deg, #f1c40f, #ffffff, #000000, #f1c40f);
+    background-size: 400% 400%;
+    animation: bgMove 8s ease infinite;
+}
+
+/* background animation */
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* ================== LOGIN BOX ================== */
+.container {
+    width: 360px;
+    background: rgba(255,255,255,0.95);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+    animation: slideUp 0.7s ease;
+}
+
+/* slide animation */
+@keyframes slideUp {
+    from {transform: translateY(30px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+/* ================== TITLE ================== */
+h2 {
+    margin-bottom: 20px;
+    color: #111;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* ================== INPUT ================== */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* focus effect */
+input:focus {
+    border-color: #f1c40f;
+    box-shadow: 0 0 10px rgba(241,196,15,0.5);
+}
+
+/* ================== BUTTON ================== */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #f1c40f, #000);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+/* hover */
+button:hover {
+    background: linear-gradient(90deg, #000, #f1c40f);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ================== TEXT ================== */
+p {
+    margin-top: 15px;
+    color: #333;
+    font-size: 14px;
+}
+
+/* links */
+p a {
+    color:  #f1c40f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* ================== FLOAT LIGHT EFFECT ================== */
+.container::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background:  #f1c40f;
+    border-radius: 50%;
+    top: 10%;
+    left: 20%;
+    filter: blur(40px);
+    animation: float 6s infinite;
+}
+
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(20px);}
+    100% {transform: translateY(0);}
+}
+/* ================== ANIMATIONS ================== */
+@keyframes bounce {0%,100% {transform:translateY(0);} 50% {transform:translateY(-10px);}}
+@keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
+@keyframes slideDown {from {opacity:0; transform:translateY(-20px) translateX(-50%);} to {opacity:1; transform:translateY(0) translateX(-50%);}}
+@keyframes pulse {0%,100% {transform:scale(1);} 50% {transform:scale(1.05);}}

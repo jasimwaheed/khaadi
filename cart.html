@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cart - Khaadi Store</title>
+<link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<header class="cart-header">
+    <h2>🛒 Your Cart</h2>
+    <div class="button-container">
+        <a href="../index.html" class="home-btn">🏠 Back to Home</a>
+        <a href="../track/track.html" class="admin-btn">Track Order</a>
+    </div>
+</header>
+
+<main class="cart-container">
+    <div id="cartItems"></div>
+    <h2>Total: PKR <span id="totalPrice">0</span></h2>
+
+    <section id="checkout">
+        <h3>Checkout (Cash on Delivery)</h3>
+        <input type="text"  id="cust_name"    placeholder="Name">
+        <input type="text"  id="cust_phone"   placeholder="Phone">
+        <input type="text"  id="cust_address" placeholder="Address">
+        <input type="email" id="cust_email"   placeholder="Email">
+        <button id="placeOrderBtn">Place Order</button>
+    </section>
+</main>
+
+<script src="cart.js?v=4"></script>
+</body>
+</html>

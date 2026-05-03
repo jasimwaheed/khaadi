@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Panel - Khaadi Store</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="admin-header">
+  <h2>Admin Panel</h2>
+  <a href="../index.html" class="home-btn">🏠 Home</a>
+  <button id="logout-btn">Logout</button>
+</header>
+
+<!-- LOGIN SECTION -->
+<section class="admin-login" id="admin-login">
+  <h3>Admin Login</h3>
+  <input type="email" id="admin-email" placeholder="Email">
+  <input type="password" id="admin-password" placeholder="Password">
+  <button type="button" id="admin-login-btn">Login</button>
+  <p id="admin-msg"></p>
+</section>
+
+<!-- ADMIN PANEL -->
+<section id="admin-panel" style="display:none;">
+
+  <!-- Add Product -->
+  <div class="add-product-form">
+    <input id="product-name" placeholder="Product Name">
+    <input id="product-price" placeholder="Price">
+    <input id="product-description" placeholder="Product Description">
+   <!-- multiple attribute add karo -->
+<input id="admin-prod-img-file" type="file" multiple accept="image/*">
+<small style="color:#888;">Multiple images select kar sakte ho (Ctrl + Click)</small>
+    <p id="product-msg"></p>
+    <button id="add-product-btn">Add Product</button>
+  </div>
+
+  <!-- Products Table -->
+  <div class="table-container">
+    <table id="admin-product-list" border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Description</th>
+          <th>Image</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <hr>
+
+  <!-- Orders -->
+  <h3>Customer Orders</h3>
+  <button onclick="showAllOrders()">Show All Orders</button>
+
+ <table id="ordersTable" border="1" style="margin-top:20px; width:100%;">
+    <thead>
+        <tr>
+            <th>Products</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Qty</th>
+            <th>Total</th>
+            <th>Tracking ID</th>
+            <th>Status</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+</section>
+
+<script src="admin.js"></script>
+</body>
+</html>
